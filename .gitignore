@@ -1,0 +1,14 @@
+.venv/
+venv/
+watcher.db
+__pycache__/
+
+.env
+
+.pytest_cache/
+.coverage/
+htmclov/
+
+dist/
+build/
+*.egg-info/
