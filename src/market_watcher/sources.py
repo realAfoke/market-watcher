@@ -19,3 +19,16 @@ class CoinGeckoSource(Source):
         return [Observation('coingecko','BTC-USD',float(data['bitcoin']['usd']),datetime.now(timezone.utc))]
 
 
+class ExchangeRateSource(Source):
+    def __init__(self,currency:str):
+        self.currency=currency
+
+    def fetch(self):
+        url='https://open.er-api.com/v6/latest/USD'
+        req=httpx.get(url,timeout=20)
+        req.raise_for_status()
+        data=req.json()
+        return [Observation("er-api",f"USD-{self.currency}",data["rates"][self.currency],datetime.now(timezone.utc))]
+
+
+
