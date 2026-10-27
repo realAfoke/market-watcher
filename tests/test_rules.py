@@ -11,16 +11,17 @@ def test_percent_incr():
 
 
 def test_should_alert_true_on_big_rise():
-    assert should_alert(45,100,5)
+    assert should_alert(45,100,5)[0]
 
 def test_should_alert_true_on_big_drop():
-    assert should_alert(120,65,5)
+    assert should_alert(120,65,5)[0]
 
 def test_should_alert_true_on_change_equal_to_threshold():
-    assert should_alert(100,105,5)
+    assert should_alert(100,105,5)[0]
 
 def test_should_alert_false_on_small_rise():
-    assert not should_alert(100,102,5)
+    change=should_alert(100,102,5)
+    assert not change[0]
 
 def test_should_alert_false_on_when_old_is_none():
     assert not should_alert(None,80,5)
