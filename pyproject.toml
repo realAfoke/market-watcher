@@ -6,7 +6,7 @@ build-backend="setuptools.build_meta"
 name="markter-watcher"
 version="0.1.0"
 requires-python=">=3.12"
-dependencies=["httpx"]
+dependencies=["httpx","python-dotenv"]
 
 [project.optional-dependencies]
 dev=["pytest"]

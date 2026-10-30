@@ -24,7 +24,7 @@ class ExchangeRateSource(Source):
         self.currency=currency
 
     def fetch(self):
-        url='https://open.er-api.com/v6/latest/USD'
+        url='https://open.er-api.com/v6/latest/USDxyz'
         req=httpx.get(url,timeout=20)
         req.raise_for_status()
         data=req.json()
