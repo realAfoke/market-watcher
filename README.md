@@ -24,6 +24,7 @@ source .venv/bin/activate
 Install the project and development dependencies:
 ```bash
 pip install -e ".[dev]"
+```
 
 Run the application
 ```bash
@@ -34,8 +35,8 @@ market-watcher
 Alerts are sent to Telegram when both of the following environment variables are configured:
 - TELEGRAM_BOT_TOKEN
 - TELEGRAM_CHAT_ID
-![Telegram alert example](docs/telegram-alert.png)
-If these variables are not provided, Telegram notifications are disabled and alert are printed to console.
+If these variables are not provided, Telegram notifications are disabled and alerts are printed to console.
+![Telegram alert example](docs/telegram-alert.png.jpg)
 
 ## Running Tests
 Run the test suite using pytest:
