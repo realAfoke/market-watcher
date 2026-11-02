@@ -43,3 +43,5 @@ Run the test suite using pytest:
 ```bash
 pytest
 ```
+
+![CI](https://github.com/realAfoke/market-watcher/actions/workflows/ci.yml/badge.svg)
