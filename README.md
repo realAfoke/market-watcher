@@ -14,7 +14,7 @@ Clone the repository:
 
 ```bash
 
-git clone <your-repo-url>
+git clone https://github.com/realAfoke/market-watcher.git
 cd market-watcher
 Create and activate a virtual environment:
 python3 -m venv .venv
