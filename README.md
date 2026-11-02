@@ -34,6 +34,7 @@ market-watcher
 Alerts are sent to Telegram when both of the following environment variables are configured:
 - TELEGRAM_BOT_TOKEN
 - TELEGRAM_CHAT_ID
+![Telegram alert example](docs/telegram-alert.png)
 If these variables are not provided, Telegram notifications are disabled and alert are printed to console.
 
 ## Running Tests
