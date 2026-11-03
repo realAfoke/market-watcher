@@ -36,8 +36,27 @@ Alerts are sent to Telegram when both of the following environment variables are
 - TELEGRAM_BOT_TOKEN
 - TELEGRAM_CHAT_ID
 If these variables are not provided, Telegram notifications are disabled and alerts are printed to console.
-![Telegram alert example](docs/telegram-alert.png.jpg)
+##!#[Telegram alert example](docs/telegram-alert.png.jpg)
 
+## Docker
+Prerequisites
+- Docker
+- Docker Compose
+Configuration
+Create a .env file in the project root:
+```bash
+touch .env
+TELEGRAM_BOT_TOKEN=your_bot_token
+TELEGRAM_CHAT_ID=your_chat_idE
+
+```
+Telegram credentials are optional. Without them, alerts are printed to the console.``
+
+## Build and Run
+Build the Docker image and start the application:
+```bash
+docker compose up --build -d
+```
 ## Running Tests
 Run the test suite using pytest:
 ```bash

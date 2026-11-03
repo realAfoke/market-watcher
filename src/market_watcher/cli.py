@@ -28,7 +28,8 @@ def run_one(sources,notifier,store):
 
 
 def main():
-    store=Storage('watcher.db')
+    db_path=os.getenv('DATABASE_PATH','watcher.db')
+    store=Storage(db_path)
     token=os.getenv("TELEGRAM_BOT_TOKEN")
     chat_id=os.getenv("TELEGRAM_CHAT_ID")
     source=[CoinGeckoSource(),ExchangeRateSource("EUR")]

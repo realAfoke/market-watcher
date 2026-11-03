@@ -1,10 +1,13 @@
 import sqlite3
+from pathlib import Path
 from .models import Observation
 
 class Storage:
     def __init__(self,path) -> None:
-        self.conn=sqlite3.connect(path)
-        self.conn.execute(
+            db_path=Path(path)
+            db_path.parent.mkdir(parents=True,exist_ok=True)
+            self.conn=sqlite3.connect(db_path)
+            self.conn.execute(
                 """CREATE TABLE IF NOT EXISTS observations(
                 id INTEGER PRIMARY KEY,
                 source TEXT NOT NULL,
