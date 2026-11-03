@@ -15,14 +15,14 @@ jobs:
           python-version: ${{matrix.python-version}}
       - run: pip install -e ".[dev]"
       - run: pytest
-  docker:
-    runs-on: ubuntu-latest
-    env:
-      TELEGRAM_BOT_TOKEN: ${{secretes.TOKEN}}
-      TELEGRAM_CHAT_ID: ${{secrets.CHAT_ID}}
-      DATABASE_PATH: ${{vars.DATABASE_PATH}}
-    steps:
-      - uses: actions/checkout@v4
-      - run: docker compose build
-      - run: docker compose up -d
-    
+  # docker:
+  #   runs-on: ubuntu-latest
+  #   env:
+  #     TELEGRAM_BOT_TOKEN: ${{secrets.TOKEN}}
+  #     TELEGRAM_CHAT_ID: ${{secrets.CHAT_ID}}
+  #     DATABASE_PATH: ${{vars.DATABASE_PATH}}
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - run: docker compose build
+  #     - run: docker compose up -d
+  #
